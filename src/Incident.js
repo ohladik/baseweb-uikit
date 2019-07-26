@@ -9,6 +9,19 @@ import {
 
 import DropdownButton from './DropdownButton';
 
+const EditDropdownButton = () => (
+    <ButtonGroup  
+        overrides={{ Root: {
+            style: ({$theme}) => ({
+                border: '2px solid',
+                borderColor: $theme.colors.primary,
+            }),
+        }, }}>
+        <Button>Edit</Button>
+        <DropdownButton />
+    </ButtonGroup>
+);
+
 const Incident = ({ date, status, location }) => (
     <Block backgroundColor="mono200">
         <Block display="flex" justifyContent="space-between" alignItems="center" padding="scale800">
@@ -22,10 +35,7 @@ const Incident = ({ date, status, location }) => (
                     Some of the servers are without a power supply. We are experiencing a large-scale power outage due to a fire inside the datacenter. Follow this thread for more info.
                 </Paragraph1>
             </Block>
-            <ButtonGroup>
-                <Button>Edit</Button>
-                <DropdownButton />
-            </ButtonGroup>
+            <EditDropdownButton />
         </Block>
         <Block display="flex" padding="scale800">
             <Block paddingRight="scale600">
@@ -64,10 +74,7 @@ const Incident = ({ date, status, location }) => (
         <Block display="flex" justifyContent="space-between" alignItems="center" padding="scale800">
             <Label1>9. 4., 6:14 GMT+7</Label1>
             <Paragraph1>We're investigating the issue</Paragraph1>
-            <ButtonGroup>
-                <Button>Edit</Button>
-                <DropdownButton />
-            </ButtonGroup>
+            <EditDropdownButton />
         </Block>
     </Block>
   );

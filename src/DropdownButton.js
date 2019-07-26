@@ -23,7 +23,11 @@ const Dropdown = ({ children }) => {
           />
         }
       >
-        <Button kind={KIND.tertiary} size={SIZE.compact} endEnhancer={() => <Down size={24} />}>
+        <Button
+            kind={KIND.tertiary}
+            size={SIZE.compact}
+            endEnhancer={() => <Down size={24} />}
+        >
             {children}
         </Button>
       </Popover>
