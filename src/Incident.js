@@ -1,13 +1,16 @@
 import React from 'react';
 import { Block } from 'baseui/block';
-import { Button, SIZE, KIND } from 'baseui/button';
+import { ButtonGroup } from 'baseui/button-group';
+import { Button, SIZE } from 'baseui/button';
 import {
     Label1,
     Paragraph1,
   } from 'baseui/typography';
 
+import DropdownButton from './DropdownButton';
+
 const Incident = ({ date, status, location }) => (
-    <Block backgroundColor="#F7F7F7">
+    <Block backgroundColor="mono200">
         <Block display="flex" justifyContent="space-between" alignItems="center" padding="scale800">
             <Block display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-start">
                 <Block display="flex">
@@ -19,7 +22,10 @@ const Incident = ({ date, status, location }) => (
                     Some of the servers are without a power supply. We are experiencing a large-scale power outage due to a fire inside the datacenter. Follow this thread for more info.
                 </Paragraph1>
             </Block>
-            <Button>Edit</Button>
+            <ButtonGroup>
+                <Button>Edit</Button>
+                <DropdownButton />
+            </ButtonGroup>
         </Block>
         <Block display="flex" padding="scale800">
             <Block paddingRight="scale600">
@@ -51,14 +57,17 @@ const Incident = ({ date, status, location }) => (
                 </Block>
             </Block>
         </Block>
-        <Block display="flex" justifyContent="space-between" alignItems="center" backgroundColor="#E7E7E7" padding="scale800">
+        <Block display="flex" justifyContent="space-between" alignItems="center" backgroundColor="mono400" padding="scale800">
             <Label1>Event timeline</Label1>
             <Button size={SIZE.compact}>Add timeline item</Button>
         </Block>
         <Block display="flex" justifyContent="space-between" alignItems="center" padding="scale800">
             <Label1>9. 4., 6:14 GMT+7</Label1>
             <Paragraph1>We're investigating the issue</Paragraph1>
-            <Button kind={KIND.secondary}>Edit</Button>
+            <ButtonGroup>
+                <Button>Edit</Button>
+                <DropdownButton />
+            </ButtonGroup>
         </Block>
     </Block>
   );
