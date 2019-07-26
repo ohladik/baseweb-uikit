@@ -10,7 +10,8 @@ import {
 import DropdownButton from './DropdownButton';
 
 const EditDropdownButton = () => (
-    <ButtonGroup  
+    <ButtonGroup
+        size="compact"
         overrides={{ Root: {
             style: ({$theme}) => ({
                 border: '2px solid',
