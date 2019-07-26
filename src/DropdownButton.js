@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, SIZE, KIND } from 'baseui/button';
+import { Button } from 'baseui/button';
 import Down from 'baseui/icon/triangle-down.js';
 import { Popover } from 'baseui/popover';
 import { StatefulMenu } from 'baseui/menu';
@@ -24,8 +24,8 @@ const Dropdown = ({ children }) => {
         }
       >
         <Button
-            kind={KIND.tertiary}
-            size={SIZE.compact}
+            kind="tertiary"
+            size="compact"
             endEnhancer={() => <Down size={24} />}
         >
             {children}

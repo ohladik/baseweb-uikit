@@ -1,7 +1,7 @@
 import React from 'react';
 import { Block } from 'baseui/block';
 import { ButtonGroup } from 'baseui/button-group';
-import { Button, SIZE } from 'baseui/button';
+import { Button } from 'baseui/button';
 import {
     Label1,
     Paragraph1,
@@ -70,7 +70,7 @@ const Incident = ({ date, status, location }) => (
         </Block>
         <Block display="flex" justifyContent="space-between" alignItems="center" backgroundColor="mono400" padding="scale800">
             <Label1>Event timeline</Label1>
-            <Button size={SIZE.compact}>Add timeline item</Button>
+            <Button size="compact">Add timeline item</Button>
         </Block>
         <Block display="flex" justifyContent="space-between" alignItems="center" padding="scale800">
             <Label1>9. 4., 6:14 GMT+7</Label1>
